@@ -6,6 +6,7 @@ namespace Labs
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
