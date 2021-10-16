@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using core;
 
-namespace Smirnov
+
+
+namespace Labs
 {
-    class QuadraticEquation : LinearEquation, IEquationInterface
+    class QuadraticEquation : LinearEquation
     {
         public List<double> Solve(double a, double b, double c)
         {
@@ -13,13 +13,11 @@ namespace Smirnov
             {
                 return SolveLinearEquation(b, c);
             }
-            SmirnovLog.I().Log("Определено, что это квадратное уравнение");
+
             double descriminant = SolveDesriminant(a, b, c);
             if (descriminant < 0)
             {
-
-                throw new SmirnovException("Ошибка: уравнение не имеет решений");
-
+                throw new Exception("Ошибка: уравнение не имеет решений");
             }
             if (descriminant == 0)
             {
